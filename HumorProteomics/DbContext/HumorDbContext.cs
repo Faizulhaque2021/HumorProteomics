@@ -8,10 +8,10 @@ namespace HumorProteomics.DbContext
         public HumorDbContext(DbContextOptions  options) : base() 
         { 
         }
-        public virtual DbSet<Clinical_Data> cd { get; set; }
-        public virtual DbSet<Protein_Data> pd { get; set; }
-        public virtual DbSet<Protein_Summary> ps { get; set; }
-        public virtual DbSet<Data_Download> dd { get; set; }
+        public virtual DbSet<ClinicalData> cd { get; set; }
+        public virtual DbSet<ProteinData> pd { get; set; }
+        public virtual DbSet<ProteinSummary> ps { get; set; }
+        public virtual DbSet<DataDownload> dd { get; set; }
 
     }
 }

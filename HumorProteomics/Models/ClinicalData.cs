@@ -1,7 +1,8 @@
 ﻿namespace HumorProteomics.Models
 {
-    public class Clinical_Data
+    public class ClinicalData
     {
+        public int ClinicalDataID { get; set; }
         public int SampleID { get; set; }
         public string CG { get; set; }
         public string Sex { get; set; }

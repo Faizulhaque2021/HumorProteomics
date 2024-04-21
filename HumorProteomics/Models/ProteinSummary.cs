@@ -1,7 +1,8 @@
 ﻿namespace HumorProteomics.Models
 {
-    public class Protein_Summary
+    public class ProteinSummary
     {
+        public int ProteinSummaryID { get; set; }
         public int AccessionID { get; set; }
         public string GeSymbol { get; set; }
         public string ProtName { get; set; }

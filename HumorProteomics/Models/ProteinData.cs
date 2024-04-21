@@ -1,7 +1,8 @@
 ﻿namespace HumorProteomics.Models
 {
-    public class Protein_Data
+    public class ProteinData
     {
+        public int ProteinDataID { get; set; }
         public int SampleID { get; set; }
         public int AccessionID { get; set; }
         public double Score { get; set; }
