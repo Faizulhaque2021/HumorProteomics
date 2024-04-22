@@ -1,11 +1,12 @@
 ﻿using HumorProteomics.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace HumorProteomics.DbContext
 {
-    public class HumorDbContext
+    public class HumorDbContext:IdentityDbContext
     {
-        public HumorDbContext(DbContextOptions  options) : base() 
+        public HumorDbContext(DbContextOptions  options) : base(options) 
         { 
         }
         public virtual DbSet<ClinicalData> cd { get; set; }
