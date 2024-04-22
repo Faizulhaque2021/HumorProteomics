@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HumorProteomics.Migrations
 {
     [DbContext(typeof(HumorDbContext))]
-    [Migration("20240422034201_init")]
+    [Migration("20240422043830_init")]
     partial class init
     {
         /// <inheritdoc />
