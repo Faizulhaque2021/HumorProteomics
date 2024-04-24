@@ -1,6 +1,8 @@
 using HumorProteomics.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using HumorProteomics.Interface;
+using HumorProteomics.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,11 @@ builder.Services.AddDbContext<HumorDbContext>(options =>
 });
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<HumorDbContext>();
+
+builder.Services.AddTransient<IClinicalData, ClinicalDataRepository>();
+builder.Services.AddTransient<IProteinData, ProteinDataRepository>();
+builder.Services.AddTransient<IProteinSummary, ProteinSummaryRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

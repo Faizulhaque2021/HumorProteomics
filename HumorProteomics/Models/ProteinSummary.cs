@@ -1,14 +1,42 @@
-﻿namespace HumorProteomics.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HumorProteomics.Models
 {
     public class ProteinSummary
     {
+
         public int ProteinSummaryID { get; set; }
-        public int AccessionID { get; set; }
-        public string GeSymbol { get; set; }
-        public string ProtName { get; set; }
-        public string GeNames { get; set; }
+
+        [Display(Name = "AccessionID")]
+        [Required]
+        [StringLength(1000)]
+        public string? AccessionID { get; set; }
+
+        [Display(Name = "Gene Symbol")]
+        [Required]
+        [StringLength(1000)]
+        public string? GeSymbol { get; set; }
+
+        [Display(Name = "Protein Name")]
+        [Required]
+        [StringLength(1000)]
+        public string? ProtName { get; set; }
+
+        [Display(Name = "Gene Names")]
+        [Required]
+        [StringLength(1000)]
+        public string? GeNames { get; set; }
+
+        [Display(Name = "Total PSMs")]
+        [Required]
         public int TotalPs { get; set; }
+
+        [Display(Name = "Mean PSMs")]
+        [Required]
         public double MePSMs { get; set; }
+
+        [Display(Name = "Detected in (%)")]
+        [Required]
         public int Detected { get; set; }
     }
 }
