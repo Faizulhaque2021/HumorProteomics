@@ -17,11 +17,11 @@ namespace HumorProteomics.Models
 
         [Display(Name = "Score")]
         [Required]
-        public double Score { get; set; }
+        public int Score { get; set; }
 
         [Display(Name = "Coverage")]
         [Required]
-        public double Coverage { get; set; }
+        public int Coverage { get; set; }
 
         [Display(Name = "Proteins")]
         [Required]
@@ -45,10 +45,10 @@ namespace HumorProteomics.Models
 
         [Display(Name = "MW KDA")]
         [Required]
-        public double MWK { get; set; }
+        public int MWK { get; set; }
 
         [Display(Name = "Calc PI")]
         [Required]
-        public double Calc { get; set; }
+        public int Calc { get; set; }
     }
 }

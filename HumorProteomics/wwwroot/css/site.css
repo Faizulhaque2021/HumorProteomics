@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  margin-bottom: 70px;
+    margin-bottom: 70px;
+    font-family: "Roboto", sans-serif;
 }
 
 .btn-field {
@@ -38,3 +39,4 @@ body {
      cursor:pointer;
      transition: background 1s;
  }
+

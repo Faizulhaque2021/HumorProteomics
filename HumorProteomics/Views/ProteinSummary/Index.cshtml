@@ -1,0 +1,90 @@
+﻿@model IEnumerable<HumorProteomics.Models.ProteinSummary>
+
+@{
+    ViewData["Title"] = "Protein Summary";
+    SortModel sortModel = (SortModel)ViewData["sortModel"];
+    PagerModel pager = ViewBag.Pager;
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+<h3 class="text-center"><i class="fas fa-comment-doller text-success"></i> Protein Summary Information </h3>
+
+<hr />
+
+<div class="row">
+    <div class="col-12">
+        <partial name="_topBar" model="@pager" />
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model=> model.AccessionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeSymbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProtName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeNames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MePSMs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Detected)
+            </th>
+            <th>
+                <a asp-action="Create" class="btn btn-success text-white"><i class="fas fa-random"></i>  Protein Summary </a>
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccessionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GeSymbol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProtName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GeNames)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPs)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MePSMs)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Detected)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProteinSummaryID"></a>
+                    <a asp-action="Details" asp-route-id="@item.ProteinSummaryID"></a>
+                    <a asp-action="Delete" asp-route-id="@item.ProteinSummaryID"></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-12">
+        <partial name="_bottomBar" model="@pager" />
+    </div>
+</div>
