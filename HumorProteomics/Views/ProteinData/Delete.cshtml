@@ -1,0 +1,85 @@
+﻿@model HumorProteomics.Models.ProteinData
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SampleID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SampleID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccessionID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccessionID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Coverage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Coverage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Proteins)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Proteins)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniquePeptides)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniquePeptides)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Peptides)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Peptides)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PSM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PSM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MWK)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MWK)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calc)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProteinDataID" />
+        <div class="button" asp-action="Delete">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index" class="btn btn-success">Back to List</a>
+        </div>
+    </form>
+</div>

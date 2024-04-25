@@ -9,22 +9,22 @@ namespace HumorProteomics.Models
 
         [Display(Name = "AccessionID")]
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string? AccessionID { get; set; }
 
         [Display(Name = "Gene Symbol")]
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string? GeSymbol { get; set; }
 
         [Display(Name = "Protein Name")]
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string? ProtName { get; set; }
 
         [Display(Name = "Gene Names")]
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string? GeNames { get; set; }
 
         [Display(Name = "Total PSMs")]

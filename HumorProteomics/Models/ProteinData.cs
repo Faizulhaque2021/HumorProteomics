@@ -12,7 +12,7 @@ namespace HumorProteomics.Models
 
         [Display(Name = "AccessionID")]
         [Required]
-        [StringLength(1000)]
+        [StringLength(20)]
         public string? AccessionID { get; set; }
 
         [Display(Name = "Score")]
@@ -27,7 +27,7 @@ namespace HumorProteomics.Models
         [Required]
         public int Proteins { get; set; }
 
-        [Display(Name = "Unique Peptides")]
+        [Display(Name = "UniquePep")]
         [Required]
         public int UniquePeptides { get; set; }
 
@@ -43,11 +43,11 @@ namespace HumorProteomics.Models
         [Required]
         public int AA { get; set; }
 
-        [Display(Name = "MW KDA")]
+        [Display(Name = "MWKDA")]
         [Required]
         public int MWK { get; set; }
 
-        [Display(Name = "Calc PI")]
+        [Display(Name = "CalcPI")]
         [Required]
         public int Calc { get; set; }
     }

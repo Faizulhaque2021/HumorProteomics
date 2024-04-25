@@ -1,1 +1,59 @@
-﻿
+﻿@model HumorProteomics.Models.ProteinSummary
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href="~/css/proteinsummary.css" rel="stylesheet" />
+
+<body1>
+    <div class="container">
+        <header>Protein Summary  Details</header>
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div class="form first">
+                <div class="details Protein">
+                    <div class="fields">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="ProteinSummaryID" />
+                        <div class="input-field">
+                            <label asp-for="AccessionID">Accession ID</label>
+                            <input asp-for="AccessionID" type="text" placeholder="Enter Accession ID" />
+                        </div>
+                        <div class="input-field">
+                            <label asp-for="GeSymbol">Gene Symbol</label>
+                            <input asp-for="GeSymbol" type="text" placeholder="Enter Gene Symbol" />
+                        </div>
+                        <div class="input-field">
+                            <label asp-for="ProtName">Protein Name</label>
+                            <input asp-for="ProtName" type="text" placeholder="Enter Protein Name" />
+                        </div>
+                        <div class="input-field">
+                            <label asp-for="GeNames">Gene Names</label>
+                            <input asp-for="GeNames" type="text" placeholder="Enter Gene Names" />
+                        </div>
+                        <div class="input-field">
+                            <label asp-for="TotalPs">Total PSMs</label>
+                            <input asp-for="TotalPs" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Total PSMs" />
+                        </div>
+                        <div class="input-field">
+                            <label asp-for="MePSMs">Mean PSMs</label>
+                            <input asp-for="MePSMs" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Mean PSMs" />
+                        </div>
+                        <div class="input-field">
+                            <label asp-for="Detected">Detected in (%)</label>
+                            <input asp-for="Detected" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Detected in (%)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Save" class="btn btn-success"/> |
+                    <a asp-action="Index" class="btn btn-success">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body1>
+
+
+
+
+

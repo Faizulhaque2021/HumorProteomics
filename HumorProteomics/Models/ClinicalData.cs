@@ -31,7 +31,7 @@ namespace HumorProteomics.Models
 
         [Display(Name = "Ethnicity")]
         [Required]
-        [StringLength(100)]
+        [StringLength(10)]
         public string? Ethnicity { get; set; }
 
         [Display(Name = "IOP")]

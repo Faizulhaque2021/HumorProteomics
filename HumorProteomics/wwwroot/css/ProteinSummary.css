@@ -34,29 +34,29 @@
  }
 
 
- .container form1 {
+ .container form {
     position: relative;
     margin-top: 16px;
     min-height: 430px;
     background-color: #2f2f2;
  }
 
- .container form1 .form{
+ .container form .form{
     background-color:#fff;
  }
 
- .container form1 .details {
+ .container form .details {
     margin-top: 10px;
  }
 
- .container form1 .fields {
+ .container form .fields {
     display:flex;
     align-items:center;
     justify-content:space-between;
     flex-wrap:wrap;
  }
 
-form1 .fields .input-field {
+form .fields .input-field {
     display:flex;
     width:calc(100%/3 -15px);
     flex-direction:column;

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<HumorProteomics.Models.ProteinSummary>
 
 @{
-    ViewData["Title"] = "Protein Summary";
+    ViewData["Title"] = "Index";
     SortModel sortModel = (SortModel)ViewData["sortModel"];
     PagerModel pager = ViewBag.Pager;
 }
@@ -22,7 +22,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model=> model.AccessionID)
+                @Html.DisplayNameFor(model => model.AccessionID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.GeSymbol)
@@ -42,10 +42,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Detected)
             </th>
+            <th>Action</th>
             <th>
                 <a asp-action="Create" class="btn btn-success text-white"><i class="fas fa-random"></i>  Protein Summary </a>
             </th>
-            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -73,10 +73,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Detected)
                 </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ProteinSummaryID"></a>
-                    <a asp-action="Details" asp-route-id="@item.ProteinSummaryID"></a>
-                    <a asp-action="Delete" asp-route-id="@item.ProteinSummaryID"></a>
+                <td class="button">
+                    <a asp-action="Edit" asp-route-id="@item.ProteinSummaryID"><i class="fas fa-user-edit fa-2x"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.ProteinSummaryID"><i class="fas fa-trash fa-2x"></i></a>
                 </td>
             </tr>
         }
@@ -88,3 +87,4 @@
         <partial name="_bottomBar" model="@pager" />
     </div>
 </div>
+

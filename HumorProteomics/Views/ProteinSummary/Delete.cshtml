@@ -1,1 +1,60 @@
-﻿
+﻿@model HumorProteomics.Models.ProteinSummary
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccessionID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccessionID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GeSymbol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GeSymbol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProtName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProtName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GeNames)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GeNames)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalPs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalPs)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MePSMs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MePSMs)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Detected)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Detected)
+        </dd>
+    </dl> 
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProteinSummaryID" />
+        <div class="button" asp-action="Delete">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index" class="btn btn-success">Back to List</a>
+        </div>
+    </form>
+</div>

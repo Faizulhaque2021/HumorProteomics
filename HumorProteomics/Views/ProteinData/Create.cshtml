@@ -1,0 +1,154 @@
+﻿@model HumorProteomics.Models.ProteinData
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link href="~/css/proteindata.css" rel="stylesheet" />
+
+<body2>
+    <div class="container">
+        <header>Protein Data  Details</header>
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="form first">
+                <div class="details Protein">
+                    <div class="fields">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="input-field">
+                            <label asp-for="SampleID">Sample ID</label>
+                            <input asp-for="SampleID" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Sample ID" />
+                        </div>
+                        <span asp-validation-for="SampleID" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="AccessionID">AccessionID</label>
+                            <input asp-for="AccessionID" type="text" placeholder="Enter AccessionID" />
+                        </div>
+                        <span asp-validation-for="AccessionID" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Score">Score</label>
+                            <input asp-for="Score" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Score" />
+                        </div>
+                        <span asp-validation-for="Score" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Coverage">Coverage</label>
+                            <input asp-for="Coverage" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Coverage" />
+                        </div>
+                        <span asp-validation-for="Coverage" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Proteins">Proteins</label>
+                            <input asp-for="Proteins" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Proteins" />
+                        </div>
+                        <span asp-validation-for="Proteins" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="UniquePeptides">Unique Peptides</label>
+                            <input asp-for="UniquePeptides" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Unique Peptides" />
+                        </div>
+                        <span asp-validation-for="UniquePeptides" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Peptides">Peptides</label>
+                            <input asp-for="Peptides" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Peptides" />
+                        </div>
+                        <span asp-validation-for="Peptides" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="PSM">PSM</label>
+                            <input asp-for="PSM" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter PSM" />
+                        </div>
+                        <span asp-validation-for="PSM" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="AA">AA</label>
+                            <input asp-for="AA" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter AA" />
+                        </div>
+                        <span asp-validation-for="AA" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="MWK">MWK</label>
+                            <input asp-for="MWK" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter MWK" />
+                        </div>
+                        <span asp-validation-for="MWK" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Calc">Calc</label>
+                            <input asp-for="Calc" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Calc" />
+                        </div>
+                        <span asp-validation-for="Calc" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Create" class="btn btn-primary" /> |
+                    <a asp-action="Index" class="btn btn-success">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body2>
+
+
+
+
+@* <div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SampleID" class="control-label"></label>
+                <input asp-for="SampleID" class="form-control" />
+                <span asp-validation-for="SampleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccessionID" class="control-label"></label>
+                <input asp-for="AccessionID" class="form-control" />
+                <span asp-validation-for="AccessionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Score" class="control-label"></label>
+                <input asp-for="Score" class="form-control" />
+                <span asp-validation-for="Score" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coverage" class="control-label"></label>
+                <input asp-for="Coverage" class="form-control" />
+                <span asp-validation-for="Coverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proteins" class="control-label"></label>
+                <input asp-for="Proteins" class="form-control" />
+                <span asp-validation-for="Proteins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UniquePeptides" class="control-label"></label>
+                <input asp-for="UniquePeptides" class="form-control" />
+                <span asp-validation-for="UniquePeptides" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Peptides" class="control-label"></label>
+                <input asp-for="Peptides" class="form-control" />
+                <span asp-validation-for="Peptides" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PSM" class="control-label"></label>
+                <input asp-for="PSM" class="form-control" />
+                <span asp-validation-for="PSM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AA" class="control-label"></label>
+                <input asp-for="AA" class="form-control" />
+                <span asp-validation-for="AA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MWK" class="control-label"></label>
+                <input asp-for="MWK" class="form-control" />
+                <span asp-validation-for="MWK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calc" class="control-label"></label>
+                <input asp-for="Calc" class="form-control" />
+                <span asp-validation-for="Calc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div> *@
+

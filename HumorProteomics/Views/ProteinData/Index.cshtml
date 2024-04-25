@@ -1,0 +1,116 @@
+﻿@model IEnumerable<HumorProteomics.Models.ProteinData>
+
+@{
+    ViewData["Title"] = "Index";
+    SortModel sortModel = (SortModel)ViewData["sortModel"];
+    PagerModel pager = ViewBag.Pager;
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+<h3 class="text-center"><i class="fas fa-comment-doller text-success"></i> Protein Data Information </h3>
+
+<hr />
+
+<div class="row">
+    <div class="col-12">
+        <partial name="_topBar" model="@pager" />
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SampleID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccessionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proteins)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UniquePeptides)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peptides)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PSM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MWK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calc)
+            </th>
+            <th>Action</th>
+            <th>
+                <a asp-action="Create" class="btn btn-success text-white"><i class="fas fa-random"></i>  Protein Data </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SampleID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccessionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Score)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Coverage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proteins)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UniquePeptides)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Peptides)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PSM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MWK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calc)
+                </td>
+                <td class="button">
+                    <a asp-action="Edit" asp-route-id="@item.ProteinDataID"><i class="fas fa-user-edit fa-2x"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.ProteinDataID"><i class="fas fa-trash fa-2x"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-12">
+        <partial name="_bottomBar" model="@pager" />
+    </div>
+</div>
+
+
+
