@@ -65,7 +65,7 @@ namespace HumorProteomics.Controllers
         {
             SortModel sortModel = ApplySort(sortExpression);
             ViewBag.SearchText = SearchText;
-            List<ClinicalData> clinidata = _clinicalData.GetAllClinicalData(sortModel.SortedProperty, sortModel.SortedOrder, SearchText);
+            List<ClinicalData> clinidata = _clinicalData.GetAllClinicalData(sortModel.SortedProperty, sortModel.SortedOrder, SearchText,pg,pageSize);
             PaginatedList<ClinicalData> cldata = new PaginatedList<ClinicalData>(clinidata, pg, pageSize);
             var pager = new PagerModel(cldata.TotalRecords, pg, pageSize);
             pager.SortExpression = sortExpression;

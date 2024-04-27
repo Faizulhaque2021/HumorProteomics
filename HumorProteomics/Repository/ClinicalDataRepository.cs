@@ -57,7 +57,7 @@ namespace HumorProteomics.Repository
             return cld;
         }
 
-        public List<ClinicalData> GetAllClinicalData(string sortProperty, SortOrder sortOrder, string SearchText = "")
+        public List<ClinicalData> GetAllClinicalData(string sortProperty, SortOrder sortOrder, string SearchText = "", int pageIndex = 1, int pageSize = 10)
         {
             List<ClinicalData> cld = _context.cd.ToList();
             if (SearchText != "" && SearchText != null)
@@ -70,6 +70,7 @@ namespace HumorProteomics.Repository
                 cld = _context.cd.ToList();
             }
             cld = DoSort(cld, sortProperty, sortOrder);
+            PaginatedList<ClinicalData> recld = new PaginatedList<ClinicalData>(cld, pageIndex, pageSize);
             return cld;
         }
 

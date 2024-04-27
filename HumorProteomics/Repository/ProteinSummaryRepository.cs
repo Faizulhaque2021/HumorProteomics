@@ -56,7 +56,7 @@ namespace HumorProteomics.Repository
             return psm;
         }
 
-        public List<ProteinSummary> GetAllProteinSummary(string sortProperty, SortOrder sortOrder, string SearchText = "")
+        public List<ProteinSummary> GetAllProteinSummary(string sortProperty, SortOrder sortOrder, string SearchText = "", int pageIndex=1, int pageSize=10)
         {
             List<ProteinSummary> psm = _context.ps.ToList();
             if (SearchText !="" && SearchText !=null)
@@ -69,6 +69,7 @@ namespace HumorProteomics.Repository
                 psm = _context.ps.ToList();
             }
             psm = DoSort(psm, sortProperty, sortOrder);
+            PaginatedList<ProteinSummary> repro = new PaginatedList<ProteinSummary>(psm, pageIndex, pageSize);
             return psm;
         }
 

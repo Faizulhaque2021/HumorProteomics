@@ -58,7 +58,7 @@ namespace HumorProteomics.Repository
             return prodata;
         }
 
-        public List<ProteinData> GetAllProteinData(string sortProperty, SortOrder sortOrder, string SearchText = "")
+        public List<ProteinData> GetAllProteinData(string sortProperty, SortOrder sortOrder, string SearchText = "", int pageIndex = 1, int pageSize = 10)
         {
             List<ProteinData> prodata = _context.pd.ToList();
             if (SearchText != "" && SearchText != null)
@@ -71,6 +71,7 @@ namespace HumorProteomics.Repository
                 prodata = _context.pd.ToList();
             }
             prodata = DoSort(prodata, sortProperty, sortOrder);
+            PaginatedList<ProteinData> reprodata = new PaginatedList<ProteinData>(prodata, pageIndex, pageSize);
             return prodata;
         }
 

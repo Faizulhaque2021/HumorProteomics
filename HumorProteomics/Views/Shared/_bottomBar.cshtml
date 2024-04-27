@@ -1,12 +1,23 @@
 ﻿@model PagerModel
 
-<div class="container m-0 p-0 btn-group" style="background-color:rgb(65,152,199); border-radius:10px height:45px; color:white;">
+<div class="container m-0 p-0 btn-group" style="background-color:rgb(65,152,199); border-radius:10px; height:45px; color:white;">
+
     <div class="col-4 btn-group p-1 m-1">
         <p>
             Showing @Model.StartRecord to @Model.EndRecord of @Model.TotalItems Rows
         </p>
     </div>
-    <div class="col-7 btn-group justify-content-end m-1">
+
+    <div class="col-4 btn-group justify-content-center">
+        <span class="col-4 mt-1 p-0">
+            Rows Per Page 
+        </span>
+        <span class="col-3 p-0">
+            <select class="form-control" id="pageSelector" asp-items="Model.GetPageSize()"></select>
+        </span>
+    </div> 
+
+    <div class="col-2 btn-group justify-content-end">
         <p>
             Showing @Model.CurrentPage/@Model.TotalPages Rows 
         </p>

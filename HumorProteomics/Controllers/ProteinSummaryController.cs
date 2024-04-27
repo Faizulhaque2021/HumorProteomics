@@ -61,7 +61,7 @@ namespace HumorProteomics.Controllers
         {
             SortModel sortModel = ApplySort(sortExpression);
             ViewBag.SearchText = SearchText;
-            List<ProteinSummary> prosm = _prosum.GetAllProteinSummary(sortModel.SortedProperty,sortModel.SortedOrder, SearchText);
+            List<ProteinSummary> prosm = _prosum.GetAllProteinSummary(sortModel.SortedProperty,sortModel.SortedOrder, SearchText, pg, pageSize);
             PaginatedList<ProteinSummary> proteinsum = new PaginatedList<ProteinSummary>(prosm, pg, pageSize);
             var pager = new PagerModel(proteinsum.TotalRecords, pg, pageSize);
             pager.SortExpression = sortExpression;
