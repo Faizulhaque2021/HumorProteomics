@@ -33,7 +33,7 @@
     position: relative;
     margin-top: 16px;
     min-height: 430px;
-    background-color:#f2f2f2;
+    /*background-color:#f2f2f2;*/
  }
 .container form .form {
     background-color:#fff;

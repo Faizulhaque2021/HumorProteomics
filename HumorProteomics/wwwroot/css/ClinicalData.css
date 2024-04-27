@@ -34,7 +34,7 @@ body3{
     position: relative;
     margin-top: 16px;
     min-height: 490px;
-    background-color:#fff;
+    /*background-color:#f2f2f2;*/
 }
 .container form .form {
     background-color: #fff;
