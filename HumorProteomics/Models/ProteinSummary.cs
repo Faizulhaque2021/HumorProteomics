@@ -7,7 +7,7 @@ namespace HumorProteomics.Models
 
         public int ProteinSummaryID { get; set; }
 
-        [Display(Name = "AccessionID")]
+        [Display(Name = "Accession ID")]
         [Required]
         [StringLength(20)]
         public string? AccessionID { get; set; }

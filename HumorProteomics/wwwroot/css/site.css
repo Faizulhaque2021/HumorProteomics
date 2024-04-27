@@ -2,10 +2,10 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@media (max-width:768px) {
+    html {
+        font-size: 20px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -13,8 +13,8 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
     justify-content:space-between;
 }
 
- .btn-field button{
+.btn-field button{
      flex-basis:48%;
      background:#3c00a0;
      color:#fff;
@@ -38,5 +38,5 @@ body {
      outline:0;
      cursor:pointer;
      transition: background 1s;
- }
+}
 

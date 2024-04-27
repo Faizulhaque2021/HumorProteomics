@@ -17,7 +17,7 @@
                         <input type="hidden" asp-for="ProteinDataID" />
                         <div class="input-field">
                             <label asp-for="SampleID">Sample ID</label>
-                            <input asp-for="SampleID" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Sample ID" />
+                            <input asp-for="SampleID" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Sample ID" />
                         </div>
                         <span asp-validation-for="SampleID" class="text-danger"></span>
                         <div class="input-field">
@@ -27,53 +27,53 @@
                         <span asp-validation-for="AccessionID" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="Score">Score</label>
-                            <input asp-for="Score" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Score" />
+                            <input asp-for="Score" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Score" />
                         </div>
                         <span asp-validation-for="Score" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="Coverage">Coverage</label>
-                            <input asp-for="Coverage" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Coverage" />
+                            <input asp-for="Coverage" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Coverage" />
                         </div>
                         <span asp-validation-for="Coverage" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="Proteins">Proteins</label>
-                            <input asp-for="Proteins" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Proteins" />
+                            <input asp-for="Proteins" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Proteins" />
                         </div>
                         <span asp-validation-for="Proteins" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="UniquePeptides">Unique Peptides</label>
-                            <input asp-for="UniquePeptides" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Unique Peptides" />
+                            <input asp-for="UniquePeptides" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Unique Peptides" />
                         </div>
                         <span asp-validation-for="UniquePeptides" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="Peptides">Peptides</label>
-                            <input asp-for="Peptides" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Peptides" />
+                            <input asp-for="Peptides" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Peptides" />
                         </div>
                         <span asp-validation-for="Peptides" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="PSM">PSM</label>
-                            <input asp-for="PSM" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter PSM" />
+                            <input asp-for="PSM" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter PSM" />
                         </div>
                         <span asp-validation-for="PSM" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="AA">AA</label>
-                            <input asp-for="AA" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter AA" />
+                            <input asp-for="AA" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter AA" />
                         </div>
                         <span asp-validation-for="AA" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="MWK">MWK</label>
-                            <input asp-for="MWK" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter MWK" />
+                            <input asp-for="MWK" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter MWK" />
                         </div>
                         <span asp-validation-for="MWK" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="Calc">Calc</label>
-                            <input asp-for="Calc" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Calc" />
+                            <input asp-for="Calc" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Calc" />
                         </div>
                         <span asp-validation-for="Calc" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Save" class="btn btn-primary" /> |
+                    <input type="submit" value="Save Changes" class="btn btn-primary" /> |
                     <a asp-action="Index" class="btn btn-success">Back to List</a>
                 </div>
             </div>

@@ -1,0 +1,153 @@
+﻿@model HumorProteomics.Models.ClinicalData
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<link href="~/css/clinicaldata.css" rel="stylesheet" />
+
+<body3>
+    <div class="container">
+        <header>Clinical Data  Details</header>
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div class="form first">
+                <div class="details Protein">
+                    <div class="fields">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="ClinicalDataID" />
+                        <div class="input-field">
+                            <label asp-for="SampleID">Sample ID</label>
+                            <input asp-for="SampleID" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Sample ID" />
+                        </div>
+                        <span asp-validation-for="SampleID" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="CG">C/G</label>
+                            <input asp-for="CG" type="text" placeholder="Enter C/G" />
+                        </div>
+                        <span asp-validation-for="CG" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Sex">Sex</label>
+                            <input asp-for="Sex" type="text" placeholder="Enter Sex" />
+                        </div>
+                        <span asp-validation-for="Sex" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Age">Age</label>
+                            <input asp-for="Age" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Age" />
+                        </div>
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Race">Race</label>
+                            <input asp-for="Race" type="text" placeholder="Enter Race" />
+                        </div>
+                        <span asp-validation-for="Race" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Ethnicity">Ethnicity</label>
+                            <input asp-for="Ethnicity" type="text" placeholder="Enter Ethnicity" />
+                        </div>
+                        <span asp-validation-for="Ethnicity" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="IOP">IOP</label>
+                            <input asp-for="IOP" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter IOP" />
+                        </div>
+                        <span asp-validation-for="IOP" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="IOPM">IOP Method</label>
+                            <input asp-for="IOPM" type="text" placeholder="Enter IOP Method" />
+                        </div>
+                        <span asp-validation-for="IOPM" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="OD">OD/OS</label>
+                            <input asp-for="OD" type="text" placeholder="Enter OD/OS" />
+                        </div>
+                        <span asp-validation-for="OD" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Incisional">Incisional</label>
+                            <input asp-for="Incisional" type="text" placeholder="Enter Incisional" />
+                        </div>
+                        <span asp-validation-for="Incisional" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Smoking">Smoking</label>
+                            <input asp-for="Smoking" type="text" placeholder="Enter Smoking" />
+                        </div>
+                        <span asp-validation-for="Smoking" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="HTN">HTN</label>
+                            <input asp-for="HTN" type="text" placeholder="Enter HTN" />
+                        </div>
+                        <span asp-validation-for="HTN" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="CVD">CVD</label>
+                            <input asp-for="CVD" type="text" placeholder="Enter CVD" />
+                        </div>
+                        <span asp-validation-for="CVD" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="CVA">CVA</label>
+                            <input asp-for="CVA" type="text" placeholder="Enter CVA" />
+                        </div>
+                        <span asp-validation-for="CVA" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Collagen">Collagen</label>
+                            <input asp-for="Collagen" type="text" placeholder="Enter Collagen" />
+                        </div>
+                        <span asp-validation-for="Collagen" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Diabetes">Diabetes</label>
+                            <input asp-for="Diabetes" type="text" placeholder="Enter Diabetes" />
+                        </div>
+                        <span asp-validation-for="Diabetes" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="SysDiseases">Other Systemic Diseases</label>
+                            <input asp-for="SysDiseases" type="text" placeholder="Enter Other Systemic Diseases" />
+                        </div>
+                        <span asp-validation-for="SysDiseases" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Glaucoma">Glaucoma</label>
+                            <input asp-for="Glaucoma" type="text" placeholder="Enter Glaucoma" />
+                        </div>
+                        <span asp-validation-for="Glaucoma" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Cataract">Cataract</label>
+                            <input asp-for="Cataract" type="text" placeholder="Enter Cataract" />
+                        </div>
+                        <span asp-validation-for="Cataract" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="DryEye">Dry Eye Syndrome</label>
+                            <input asp-for="DryEye" type="text" placeholder="Enter Dry Eye Syndrome" />
+                        </div>
+                        <span asp-validation-for="DryEye" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="Laser">Laser</label>
+                            <input asp-for="Laser" type="text" placeholder="Enter Laser" />
+                        </div>
+                        <span asp-validation-for="Laser" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="DR">DR</label>
+                            <input asp-for="DR" type="text" placeholder="Enter DR" />
+                        </div>
+                        <span asp-validation-for="DR" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="DiabL">Diab Laser</label>
+                            <input asp-for="DiabL" type="text" placeholder="Enter DiabL" />
+                        </div>
+                        <span asp-validation-for="DiabL" class="text-danger"></span>
+                        <div class="input-field">
+                            <label asp-for="OEyeD">Other Eye Disease</label>
+                            <input asp-for="OEyeD" type="text" placeholder="Enter OEyeD" />
+                        </div>
+                        <span asp-validation-for="OEyeD" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Save Changes" class="btn btn-primary" /> |
+                    <a asp-action="Index" class="btn btn-success">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body3>
+
+
+
+
+

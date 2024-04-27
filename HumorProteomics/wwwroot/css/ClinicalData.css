@@ -1,4 +1,5 @@
-﻿body2{
+﻿
+body3{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -6,8 +7,8 @@
 }
 .container {
     position: relative;
-    max-width:900px;
-    width:100%;
+    max-width: 900px;
+    width: 100%;
     border-radius: 6px;
     padding: 30px;
     margin: 0 20px;
@@ -32,20 +33,20 @@
 .container form {
     position: relative;
     margin-top: 16px;
-    min-height: 430px;
-    background-color:#f2f2f2;
- }
-.container form .form {
+    min-height: 490px;
     background-color:#fff;
- }
+}
+.container form .form {
+    background-color: #fff;
+}
 .container form .details {
     margin-top: 30px;
- }
+}
 .container form .fields {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 form .fields .input-field {
     display: flex;
@@ -72,13 +73,12 @@ form .fields .input-field {
 .input-field input:is(:focus, :valid) {
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
 }
-
 @media (max-width:768px) {
     .container form {
-        overflow-y: scroll;
-    }
+    overflow-y: scroll;
+}
 
-    form .fields .input-field {
-        width: calc(180% / 2 - 15px);
-    }
+form .fields .input-field {
+    width: calc(180% / 2 -15px);
+   }
 }

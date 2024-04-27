@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = null;
 }
 
 <link href="~/css/proteinsummary.css" rel="stylesheet" />
@@ -36,17 +37,17 @@
                         <span asp-validation-for="GeNames" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="TotalPs">Total PSMs</label>
-                            <input asp-for="TotalPs" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Total PSMs" />
+                            <input asp-for="TotalPs" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Total PSMs" />
                         </div>
                         <span asp-validation-for="TotalPs" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="MePSMs">Mean PSMs</label>
-                            <input asp-for="MePSMs" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Mean PSMs" />
+                            <input asp-for="MePSMs" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Mean PSMs" />
                         </div>
                         <span asp-validation-for="MePSMs" class="text-danger"></span>
                         <div class="input-field">
                             <label asp-for="Detected">Detected in (%)</label>
-                            <input asp-for="Detected" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Detected in (%)" />
+                            <input asp-for="Detected" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Detected in (%)" />
                         </div>
                         <span asp-validation-for="Detected" class="text-danger"></span>
                     </div>

@@ -32,20 +32,20 @@
                         </div>
                         <div class="input-field">
                             <label asp-for="TotalPs">Total PSMs</label>
-                            <input asp-for="TotalPs" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Total PSMs" />
+                            <input asp-for="TotalPs" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Total PSMs" />
                         </div>
                         <div class="input-field">
                             <label asp-for="MePSMs">Mean PSMs</label>
-                            <input asp-for="MePSMs" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Mean PSMs" />
+                            <input asp-for="MePSMs" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Mean PSMs" />
                         </div>
                         <div class="input-field">
                             <label asp-for="Detected">Detected in (%)</label>
-                            <input asp-for="Detected" type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" placeholder="Enter Detected in (%)" />
+                            <input asp-for="Detected" type="number" onchange="setTwoNumberDecimal" min="0" max="1000" step="0.25" value="0.00" placeholder="Enter Detected in (%)" />
                         </div>
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Save" class="btn btn-success"/> |
+                    <input type="submit" value="Save Changes" class="btn btn-success"/> |
                     <a asp-action="Index" class="btn btn-success">Back to List</a>
                 </div>
             </div>

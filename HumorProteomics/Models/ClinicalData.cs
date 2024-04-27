@@ -6,7 +6,7 @@ namespace HumorProteomics.Models
     {
         public int ClinicalDataID { get; set; }
 
-        [Display(Name = "SampleID")]
+        [Display(Name = "Sample ID")]
         [Required]
         public int SampleID { get; set; }
 

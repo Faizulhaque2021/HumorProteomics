@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Default";
+}
+
+<ej-grid id="FlatGrid" datasource="ViewBag.DataSource" is-responsive="true" enable-responsive-row="true" allow-paging="false">
+    <e-page-settings page-count="3" page-size="7"></e-page-settings>
+    <e-columns>
+        <e-column field="OrderID" header-text="Order ID" is-primary-key="true"></e-column>
+        <e-column field="CustomerID" header-text="Customer ID"></e-column>
+        <e-column field="EmployeeID" header-text="Employee ID" text-align="Right"></e-column>
+        <e-column field="ShipCity" header-text="Ship city"></e-column>
+        <e-column field="Freight" header-text="Freight" format="{0:C}"></e-column>
+    </e-columns>
+</ej-grid>
+

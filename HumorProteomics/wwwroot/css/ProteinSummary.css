@@ -1,17 +1,16 @@
-﻿body1 {
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    background:#4070f4;
+﻿body1{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #4198c7;
 }
-
 .container {
     position:relative;
     max-width:900px;
     width:100%;
     border-radius:6px;
     padding:30px;
-    margin: 0 15px;
+    margin: 0 20px;
     background-color:#fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0,1);
 }
@@ -26,29 +25,24 @@
  .container header::before {
     content:"";
     position:absolute;
-    bottom:-2px;
-    height:3px;
+    bottom: -2px;
+    height: 3px;
     width: 27px;
     border-radius:8px;
     background-color:#4070f4;        
  }
-
-
  .container form {
     position: relative;
     margin-top: 16px;
     min-height: 430px;
-    background-color: #2f2f2;
+    background-color:#f2f2f2;
  }
-
  .container form .form{
     background-color:#fff;
  }
-
  .container form .details {
-    margin-top: 10px;
+    margin-top: 30px;
  }
-
  .container form .fields {
     display:flex;
     align-items:center;
@@ -58,9 +52,9 @@
 
 form .fields .input-field {
     display:flex;
-    width:calc(100%/3 -15px);
+    width:calc(100% / 3 - 15px);
     flex-direction:column;
-    margin:4px 0;
+    margin: 4px 0;
 }
 
 .input-field label {
@@ -74,9 +68,9 @@ form .fields .input-field {
     font-size:14px;
     font-weight:400;
     color:#333;
-    border-radius:5px;
-    border:1px solid #aaa;
-    padding:0 15px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
     height: 42px;
     margin:8px 0;
 }
@@ -90,6 +84,6 @@ form .fields .input-field {
         overflow-y:scroll;
     }
     form .fields .input-field {
-        width:calc(180% / 2 -15px);
+        width:calc(180% / 2 - 15px);
     } 
 }

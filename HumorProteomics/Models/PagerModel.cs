@@ -16,7 +16,7 @@
         public string? SearchText { get; set; }
         public string? SortExpression { get; set; }
 
-        public PagerModel(int totalItems, int currentPage, int pageSize= 10) 
+        public PagerModel(int totalItems, int currentPage, int pageSize= 5) 
         { 
             this.TotalItems = totalItems;
             this.CurrentPage = currentPage;
@@ -24,8 +24,9 @@
 
             int totalPages = (int)Math.Ceiling((decimal)totalItems / (decimal)pageSize);
             TotalPages = totalPages;
-            int startPage = CurrentPage - 10;
-            int endPage = currentPage + 9;
+            int startPage = CurrentPage - 5;
+            int endPage = currentPage + 4;
+
             if (startPage <= 0)
             {
                 endPage = endPage - (startPage - 1);
@@ -37,9 +38,11 @@
                 if (endPage > 10) 
                 startPage = endPage - 9;
             }
-            StartRecord = (CurrentPage - 1) + PageSize + 1;
+            StartRecord = (CurrentPage - 1) * PageSize + 1;
             EndRecord = StartRecord - 1 + PageSize;
-            if(EndRecord > TotalItems) EndRecord = TotalItems;
+            if(EndRecord > TotalItems) 
+               EndRecord = TotalItems;
+
             if (TotalItems == 0)
             {
                 StartPage = 0;

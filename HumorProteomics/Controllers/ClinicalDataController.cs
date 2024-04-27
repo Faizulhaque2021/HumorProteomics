@@ -56,6 +56,11 @@ namespace HumorProteomics.Controllers
             return sortModel;
         }
 
+        public IActionResult Default() 
+        {
+            ViewBag.datasource = _context.cd.Take(100).ToList();
+            return View();
+        }
         public IActionResult Index(string sortExpression = "", string SearchText = "", int pg = 1, int pageSize = 10)
         {
             SortModel sortModel = ApplySort(sortExpression);
